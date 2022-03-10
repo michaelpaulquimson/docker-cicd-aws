@@ -1,14 +1,10 @@
-#language: generic
 language: node_js
 node_js:
   - "8"
-sudo: required
-services:
-  - docker
-
-  before_install:
-    - docker build -t trickmaster23/docker-cicd-aws -f Dockerfile.dev .
-
-  script:
-    - docker run trickmaster23/docker-cicd-aws npm run test -- --coverage
-    #- docker run -e CI=true trickmaster23/docker-cicd-aws npm run test
+cache: yarn
+script:
+  - echo 'Build starts!!'
+  - echo 'Installing Deps!'
+  - yarn
+  - echo 'Testing!'
+  - npm run test
