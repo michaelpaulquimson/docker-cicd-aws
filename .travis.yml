@@ -1,5 +1,7 @@
-language: generic
-
+#language: generic
+language: node_js
+node_js:
+  - "8"
 sudo: required
 services:
   - docker
