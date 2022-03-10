@@ -15,4 +15,4 @@ script:
   - echo 'Installing Deps!'
   - yarn
   - echo 'Testing!'
-  - npm run test:dev
+  - npm run test
