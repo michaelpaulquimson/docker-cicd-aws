@@ -8,5 +8,6 @@ before_install:
   - docker build -t trickmaster23/docker-cicd-aws -f Dockerfile.dev .
 
 script:
-  #- docker run trickmaster23/docker-cicd-aws npm run test -- --coverage
-  - docker run -e CI=true trickmaster23/docker-cicd-aws npm run test
+  # - docker run trickmaster23/docker-cicd-aws npm run test -- --coverage
+  - docker run -e CI=true trickmaster23/docker-cicd-aws npm run test -- --coverage
+  
